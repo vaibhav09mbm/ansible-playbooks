@@ -2,7 +2,7 @@
 #About: This will install jdk
 #
 ---
-- hosts: '{{inventory}}'
+- hosts: all
   become: yes
   roles:
   - jdk
