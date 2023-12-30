@@ -2,7 +2,7 @@
 #About: This will install cassandra
 #
 ---
-- hosts: '{{inventory}}'
+- hosts: all
   become: yes
   roles:
   - jdk
