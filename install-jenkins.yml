@@ -2,7 +2,7 @@
 #About: This will instlal jenkins
 #
 ---
-- hosts: '{{inventory}}'
+- hosts: all
   become: yes
   roles:
   - jdk
