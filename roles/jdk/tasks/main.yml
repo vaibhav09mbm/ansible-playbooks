@@ -6,7 +6,10 @@
   shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
   changed_when: false
 
-- name: Install Oracle Java
-  apt: name={{item}} state=present force=yes
+- name: Install OpenJDK Java
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
   with_items:
-  - oracle-java{{pl_jdk_version}}-installer
+    openjdk-8-jdk
